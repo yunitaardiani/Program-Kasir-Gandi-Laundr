@@ -38,17 +38,25 @@ int main ()
 	scanf("%s", password);
 	printf("\n=============================================================\n");
 
-	if(strcmp(username, "gandi_laundry")==0 && strcmp(password,"12345")==0)
-	{
-		printf("\nID operator 		: 1\n");
-		printf("Nama Operator 		: Operator 1\n");
-		printf("\nAkses diterima. Selamat Datang Di Program Kasir Gandi Laundry\n");
-    	}
-
-
+	
+	if(strcmp(username,"gandi1")==0 && strcmp(password,"admin1")==0){
+        strcpy(username, "Ni Luh Yunita Ardiani");
+        strcpy(kode_admin, "1");
+		
+		
+        printf("\n                  >>>> LOGIN BERHASIL! <<<<      \n");
+		
+		
+        } else if(strcmp(username,"gandi2")==0 && strcmp(password,"admin2")==0){
+            strcpy(username, "Ni Kadek Intan Diana Putri");
+            strcpy(kode_admin, "2");
+			
+            printf("                   >>>> LOGIN BERHASIL! <<<<      \n");
+        }
    	 else
 	{
     	printf("\nUsername dan Password tidak sesuai\n");
+		 
     	printf("Tekan Y untuk kembali atau tekan T untuk keluar : ");
 	scanf("%s", &pilihan);
 
