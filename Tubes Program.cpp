@@ -11,12 +11,12 @@ int main ()
 	char username[50],password[50],kode_admin [10], admin;
 
 	//DATA PELANGGAN
-	int biaya,tanggal,no_hp,total_bayar,berat,total_berat;
-	
-	char nama,alamat,kategori;
+	int tanggal, berat;
+	float total;
+	char nama, alamat,kategori, no_hp;
 
 	//PENGULANGAN DAN PILIHAN LOGIN ADMIN
-	char keluar,pilih;
+	char keluar, pilih;
 	
 	//TANGGAL
 	time_t t = time(NULL);
