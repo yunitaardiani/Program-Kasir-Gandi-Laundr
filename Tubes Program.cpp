@@ -57,42 +57,44 @@ int main ()
 			
             printf("                   >>>> LOGIN BERHASIL! <<<<      \n");
        }
-   	 else
-	{
-    	printf("\nUsername dan Password tidak sesuai\n");
-		 
-    	printf("Tekan Y untuk kembali atau tekan T untuk keluar : ");
-	scanf("%s", &pilihan);
+   	
+	else 
+	 {
+	 	printf("Mohon Maaf UUsername dan Password anda salah\n");
+	 	printf("Tekan Y untuk kembali atau tekan T untuk  keluar :");
+	 	scanf ("%s",&pilih);
+	 	if (pilih == 'Y'|| pilih=='y'){
+	 		goto kembali ;
+		 }
+		 else if (pilih== 'T'|| pilih=='t'){
+		 	goto keluar;
+		 }
+	 }
+	 	
+	 	printf ("\n Masukkan Nama Pelanggan :");
+	 	scanf ("%s",& nama);
+	 	printf("\n Masukkan Alamat Pelanggan :");
+	 	scanf ("%s",& alamat);
+	 	
+	
+	
+		printf("\n\nTekan Y untuk kembali atau tekan T untuk keluar : ");
+		scanf("%s",&pilih);
 
-
-		if (pilihan== 'Y' || pilihan== 'y')
+		if (pilih== 'Y' || pilih== 'y')
 		{
 			goto kembali;
 		}
-		else if (pilihan== 'T' || pilihan== 't')
-    
-		{
-			goto keluar;
-		}
-	}
-
-	printf("\n\nTekan Y untuk kembali atau tekan T untuk keluar : ");
-	scanf("%s", &pilihan);
-
-		if (pilihan== 'Y' || pilihan== 'y')
-		{
-			goto kembali;
-		}
-		else if (pilihan== 'T' || pilihan== 't')
+		else if (pilih== 'T' || pilih== 't')
 		{
 			goto keluar;
 		}
 
-	keluar : 
-
+ 		 keluar :
+  	
+printf("\n                  ** TERIMAKASIH TELAH MEMPERCAYAI GANDI LAUNDRY **      \n");
   
-	printf("\nTerimakasih Telah Mempercayai Gandi Laundry!\n"); 
-		return 0;
-
+   
+   return 0;
 }
 
