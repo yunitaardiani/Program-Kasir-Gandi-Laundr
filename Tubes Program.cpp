@@ -6,15 +6,23 @@
 int main ()
 {
 
+//struct user berisi data pengguna
+struct User
+	{
+    char nama[30];
+    char email[30];
+    char username[30];
+    char password[30];
+    char alamat[30];	 
+	};
 
 	// Data Admin 
-	char username[50],password[50],kode_admin [10], admin;
+	char nama_admin[50],password_admin[50],kode_admin [10], admin;
 
 	//DATA PELANGGAN
 	int tanggal, berat, total1;
 	float total_bayar, diskon, bayar, kembalian;
-	char no_hp[15];
-	char nama[50], alamat[50], kategori;
+	char kategori;
 	
 	// Harga Pakaian Laundry
 	int jml, total2 = 0;
@@ -26,9 +34,9 @@ int main ()
 	//TANGGAL
 	time_t t = time(NULL);
 	struct tm tm = *localtime(&t);
-	
-	
-	
+
+
+  
 	printf("| ===================== SELAMAT DATANG =================== |\n");
 	printf("|               PROGRAM KASIR GANDI LAUNDRY                |\n");
 	printf("| ======================================================== |\n");
@@ -39,62 +47,73 @@ int main ()
 	printf("********************** LOGIN ADMIN **********************\n");
 	kembali:
 	printf(" Username : ");
-	scanf("%s", username);
+	scanf("%s", nama_admin);
 	printf(" Password : ");
-	scanf("%s", password);
+	scanf("%s", password_admin);
 	printf("=========================================================\n");
 	
-        if(strcmp(username,"gandi1")==0 && strcmp(password,"admin1")==0){
-        	strcpy(username, "Ni Luh Yunita Ardiani");
+        if(strcmp(nama_admin,"gandi1")==0 && strcmp(password_admin,"admin1")==0){
+        	strcpy(nama_admin, "Ni Luh Yunita Ardiani");
         	strcpy(kode_admin, "1");
 		
 		
         	printf("\n                  >>>> LOGIN BERHASIL! <<<<      \n");
 		
-        } else if(strcmp(username,"gandi2")==0 && strcmp(password,"admin2")==0){
-            strcpy(username, "Ni Kadek Intan Diana Putri");
+        } else if(strcmp(nama_admin,"gandi2")==0 && strcmp(password_admin,"admin2")==0){
+            strcpy(nama_admin, "Ni Kadek Intan Diana Putri");
             strcpy(kode_admin, "2");
 			
             printf("                   >>>> LOGIN BERHASIL! <<<<      \n");
        }
-   	
-	else 
-	 {
-	 	printf("Mohon Maaf UUsername dan Password anda salah\n");
-	 	printf("Tekan Y untuk kembali atau tekan T untuk  keluar :");
-	 	scanf ("%s",&pilih);
-	 	if (pilih == 'Y'|| pilih=='y'){
-	 		goto kembali ;
-		 }
-		 else if (pilih== 'T'|| pilih=='t'){
-		 	goto keluar;
-		 }
-	 }
-	 	
-	 	printf ("\n Masukkan Nama Pelanggan :");
-	 	scanf ("%s",& nama);
-	 	printf("\n Masukkan Alamat Pelanggan :");
-	 	scanf ("%s",& alamat);
-	 	
-	
-	
-		printf("\n\nTekan Y untuk kembali atau tekan T untuk keluar : ");
-		scanf("%s",&pilih);
-
-		if (pilih== 'Y' || pilih== 'y')
+       
+       
+    	else
 		{
+        printf("Mohon maaf, Username dan Password anda Salah!\n");
+    	printf("Tekan Y untuk kembali atau tekan T untuk keluar : ");
+		scanf("%s", &pilih);
+
+
+		if (pilih== 'Y' || pilih== 'y'){
 			goto kembali;
 		}
 		else if (pilih== 'T' || pilih== 't')
 		{
 			goto keluar;
 		}
+		}
+	
+	//	 Registrasi & login pelanggan
+    struct User datapengguna;
+    int pilihan;
+    char nama[30];
+    char email[30];
+    char username[30];
+    char password[30];
+     char alamat[30];
 
- 		 keluar :
-  	
-printf("\n                  ** TERIMAKASIH TELAH MEMPERCAYAI GANDI LAUNDRY **      \n");
-  
-   
-   return 0;
-}
-
+    menu:
+    system("cls");
+    printf("\n==================================|");
+    printf("\n  Selamat Datang Di Gandi Laundry |");
+    printf("\n==================================|");
+    printf("\n    Silahkan Pilih Menu           |");
+    printf("\n==================================|");
+    printf("\n1. Registrasi                     |");
+    printf("\n2. Login                          |");
+	printf("\n==================================|");
+    
+    printf("\nmasukan pilihan Anda: ");
+    scanf("%d",&pilihan);
+    
+    switch (pilihan)
+    {
+    case 1:
+       system ("cls");
+        printf("\n==============================|");
+		printf("\n         Registrasi           |");
+		printf("\n==============================|");
+        printf("\nSilahkan Masukan Data  :  |");
+        printf("\n==============================|");
+        printf("\nmasukan nama: ");
+        scanf("\n%[^\n]", &datapengguna.nama);
