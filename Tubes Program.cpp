@@ -67,10 +67,10 @@ struct User
        }
        
        
-    	else
-		{
-        printf("Mohon maaf, Username dan Password anda Salah!\n");
-    	printf("Tekan Y untuk kembali atau tekan T untuk keluar : ");
+    else
+	{
+    printf("Mohon maaf, Username dan Password anda Salah!\n");
+    printf("Tekan Y untuk kembali atau tekan T untuk keluar : ");
 		scanf("%s", &pilih);
 
 
@@ -90,7 +90,7 @@ struct User
     char email[30];
     char username[30];
     char password[30];
-     char alamat[30];
+    char alamat[30];
 
     menu:
     system("cls");
@@ -111,9 +111,145 @@ struct User
     case 1:
        system ("cls");
         printf("\n==============================|");
-		printf("\n         Registrasi           |");
-		printf("\n==============================|");
+	printf("\n         Registrasi           |");
+	printf("\n==============================|");
         printf("\nSilahkan Masukan Data  :  |");
         printf("\n==============================|");
         printf("\nmasukan nama: ");
         scanf("\n%[^\n]", &datapengguna.nama);
+		    
+		    
+		    
+	printf("\nmasukan email: ");
+        scanf("\n%[^\n]", &datapengguna.email);
+        
+        printf("\nmasukan username: ");
+        scanf("\n%[^\n]", &datapengguna.username);
+        
+
+        printf("\nmasukan password: ");
+        scanf("\n%[^\n]", &datapengguna.password);
+        
+         printf("\nmasukan alamat: ");
+        scanf("\n%[^\n]", &datapengguna.alamat);
+       
+       
+		
+
+        printf("\nakun anda berhasil di daftarkan\n");
+        printf("\nKlik Enter Untuk Kembali Ke Menu");
+       	
+       	
+       
+        pilihan = 0;
+        goto menu;
+
+
+        break;
+    case 2:
+    	system("cls");
+    	printf("\n=============================|");
+    	printf("\n        Gandi Laundry         |");
+    	printf("\n                             |");
+    	printf("\n=============================|");
+    	printf("\n       Silahkan Login        |");
+    	printf("\n                             |");
+    	printf("\n=============================|");
+        printf("\nmasukan username: ");
+        scanf("\n%[^\n]", &username);
+        printf("\nmasukan password: ",&password);
+        scanf("\n%[^\n]", &password);
+
+        if (strcmp(datapengguna.username,username) == 0 && strcmp(datapengguna.password,password) == 0)
+        {
+          printf("\nanda berhasil Login");
+          system ("cls");
+          printf("\n==========================|");
+        
+        }else
+        {
+            printf("\nAnda tidak berhasil Login\n");
+            printf("\nSilahkan ENTER untuk kembali ke MENU!");
+            pilihan = 0;
+        	goto menu;
+            
+        }
+
+
+
+	// Menu Laundry
+	system("cls");
+	printf("\n|================ PILIHAN MENU =================|\n");
+	printf("|Menu Lundry : 				\t|\n");
+	printf("|\t1.Kiloan 			\t|\n");
+	printf("|\t2.Satuan 			\t|\n");
+        printf("|===============================================|\n");
+	printf("\nSilahkan Pilih Menu 	: ");
+	scanf("%i", & pilih);
+	
+	
+	if (pilih == 1)
+	{
+	kategori:
+        printf("\n");
+        printf("\n|===============================================|\n");
+	printf("|Kategori Cucian :				|\n");
+	printf("|\t1.Kilat					|\n");
+	printf("|\t2.Biasa					|\n");
+	printf("|\t3.Setrika				|\n");
+    	printf("|===============================================|\n");
+	printf("\nMasukkan kategori cucian : ");
+	scanf("%i", & kategori);
+	
+	
+	system("cls");
+	switch (kategori)
+	{
+	case (1):
+	printf ("\n++----------------------------------------------++\n");
+	printf ("++   	  ANDA MEMILIH KATEGORI KILAT		++\n" );
+	printf ("++   	  Biaya Kategori Kilat = 15000 		++\n");
+	printf ("++----------------------------------------------++\n");
+	printf ("\n");
+	printf ("Masukkan Berat (kg) : ");
+	scanf ("%i", &berat);
+	total1 = 15000 * berat;
+	if (berat >=5)
+	{
+	diskon = 10000;
+	total_bayar = 15000*berat-10000;
+	printf ("\n");
+	printf("\n                  >>>> SELAMAT ANDA MENDAPAT DISKON --> 10000 <<<<      \n");
+	}
+	else if (berat <5)
+	{
+	total_bayar = 15000*berat;
+	printf ("\n");
+	printf("\n                  >>>> ANDA TIDAK MENDAPATKAN DISKON <<<<      \n");
+	}
+	printf ("\n");
+	break;
+			
+			
+	printf("\n\nTekan Y untuk kembali atau tekan T untuk keluar : ");
+	scanf("%s",&pilih);
+
+		if (pilih== 'Y' || pilih== 'y')
+		{
+			goto kembali;
+		}
+		else if (pilih== 'T' || pilih== 't')
+		{
+			goto keluar;
+		}
+
+ 	keluar :
+  	
+	printf("\n                  ** TERIMAKASIH TELAH MEMPERCAYAI GANDI LAUNDRY **      \n");
+  
+   
+   return 0;
+}
+}
+}		
+			
