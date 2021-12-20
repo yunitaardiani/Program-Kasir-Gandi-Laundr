@@ -230,7 +230,143 @@ struct User
 	printf ("\n");
 	break;
 			
+		case (2):
+			printf ("\n++----------------------------------------------++\n");
+			printf ("++   	  ANDA MEMILIH KATEGORI BIASA		++\n" );
+			printf ("++   	  Biaya Kategori Biasa = 10000/kg	++\n");
+			printf ("++----------------------------------------------++\n");
+			printf ("\n");
+			printf ("Masukkan Berat (kg) : ");
+			scanf ("%i", &berat);
+			total1 = 10000 * berat;
 			
+			if (berat >=5)
+			{
+				diskon = 7000;
+				total_bayar = 10000*berat-7000;
+				printf ("\n");
+				printf("\n                  >>>> SELAMAT ANDA MENDAPAT DISKON --> 7000 <<<<      \n");
+			}
+			else if (berat <5)
+			{
+				total_bayar = 10000*berat;
+				printf ("\n");
+				printf("\n                  >>>> ANDA TIDAK MENDAPATKAN DISKON <<<<      \n");
+			}
+			printf ("\n");
+			break;
+			
+		case (3):
+			printf ("\n++----------------------------------------------++\n");
+			printf ("++   	  ANDA MEMILIH KATEGORI SETRIKA		++\n" );
+			printf ("++   	  Biaya Kategori Setrika = 8000/kg	++\n");
+			printf ("++----------------------------------------------++\n");
+			printf ("\n");
+			printf ("Masukkan Berat (kg) : ");
+			scanf ("%i", &berat);
+			total1 = 8000 * berat;
+			
+			if (berat >=5)
+			{
+				diskon = 5000;
+				total_bayar = 8000*berat-5000;
+				printf ("\n");
+				printf("\n                  >>>> SELAMAT ANDA MENDAPAT DISKON --> 5000 <<<<      \n");
+			}
+			else if (berat <5)
+			{
+				total_bayar = 8000*berat;
+				printf ("\n");
+				printf("\n                  >>>> ANDA TIDAK MENDAPATKAN DISKON <<<<      \n");
+			}
+			printf ("\n");
+			break;
+			
+		case (4):
+			printf("\n\n PILIHAN TIDAK TERSEDIA \n");
+			break;
+			default:
+				break;
+			
+		 }
+			
+			
+			
+	{
+			printf ("|--------------------------------------------------------|");
+			printf ("\n");
+			printf ("| Total 			: %i \t\t |\n",total1);
+			printf ("| Total Bayar			: %.0f \t\t |\n",total_bayar);
+			printf ("|--------------------------------------------------------|\n");
+			
+// Rumus Bayar
+
+			printf ("\n");
+			printf ("Masukkan Jumlah Uang Anda	: ");
+			scanf ("%f", &bayar);
+
+// Rumus Kembalian
+
+			kembalian = bayar-total_bayar;
+
+
+			printf ("Bayar : %.0f\n",bayar);
+			printf ("Kembalian : %.0f\n",kembalian);
+	}
+
+
+
+// Output program Menu 1
+
+	system("cls");
+	printf("|================= STRUK GANDI LAUNDRY ==================|\n");
+	printf("| \t\t\t\t\t\t\t |\n");
+	printf("| Nama Admin  		: %s \t |\n", nama_admin);
+	printf("| Kode Admin   		: %s \t\t\t\t |\n", kode_admin);
+	printf("| Tanggal Pembayaran 	: %02d-%02d-%d \t\t\t |\n", tm.tm_mday, tm.tm_mon + 1, tm.tm_year + 1900);
+	printf("| \t\t\t\t\t\t\t |\n");
+	printf("|--------------------------------------------------------|\n");
+	printf("| \t\t\t\t\t\t\t |\n");
+	printf("| Nama Pelanggan	: %s \t\t\t |\n", datapengguna.nama);
+	printf("| Email Pelanggan	: %s \t\t |\n", datapengguna.email);
+	printf("| Alamat Pelanggan	: %s \t\t\t |\n",datapengguna.alamat);
+	printf("| \t\t\t\t\t\t\t |\n");
+	printf("|--------------------------------------------------------|\n");
+	printf("| \t\t\t\t\t\t\t |\n");
+	printf("| Pilihan Menu 		: %i \t\t\t\t |\n", pilih);
+	printf("| Kategori Cucian 	: %i \t\t\t\t |\n",kategori);
+	printf("| Berat (kg)		: %i \t\t\t\t |\n",berat);
+	printf("| Total			: Rp. %i \t\t\t |\n",total1);
+	printf("| Total Diskon 		: Rp. %.0f \t\t\t |\n", diskon);
+	printf("| Total Bayar 		: Rp. %.0f \t\t\t |\n",total_bayar);
+	printf("| Bayar			: Rp. %.0f \t\t\t |\n",bayar);
+	printf("| Kembalian		: Rp. %.0f \t\t\t |\n",kembalian);
+	printf("|========================================================|\n");
+	
+	
+	
+	printf("\n\nTekan Y untuk kembali atau tekan T untuk keluar : ");
+	scanf("%s",&pilih);
+
+
+
+		if (pilih== 'Y' || pilih== 'y')
+		{
+			goto kembali;
+		}
+		else if (pilih== 'T' || pilih== 't')
+		{
+			goto keluar;
+		}
+
+  
+		printf("\n                  ***** TERIMAKASIH TELAH MEMPERCAYAI GANDI LAUNDRY *****      \n");
+		
+		}		
+			
+			
+			
+					
 	printf("\n\nTekan Y untuk kembali atau tekan T untuk keluar : ");
 	scanf("%s",&pilih);
 
