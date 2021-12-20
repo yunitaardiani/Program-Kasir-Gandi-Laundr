@@ -364,7 +364,103 @@ struct User
 		
 		}		
 			
+	
+
+		else if (pilih==2)	
+	{
+		
+	system("cls");
+	printf("|-------------------------------------------------|\n");
+	printf("|		  ANNOUCMENT!                     |\n");
+	printf("|-------------------------------------------------|\n");
+   	printf("|   - Masukkan kode pakaian <spasi> jumlahnya     |\n");  
+   	printf("|   - Contoh: 1 2                                 |\n");  
+   	printf("|   - Ketik 0 <spasi> 0                           |\n");  
+   	printf("|    jika sudah selesai                           |\n"); 
+   	printf("|-------------------------------------------------|\n\n");
+   	
+   	kode:
+	printf("\n");   
+	printf("***********************************************************\n");  
+   	printf("\n            >>> DAFTAR PAKAIAN LAUNDRY <<<                 \n");  
+   	printf("\n***********************************************************\n\n");
+   	printf("++------------------------------------------------------++\n");  
+   	printf("|| Kode Pakaian   	 \t\t || Harga      	||\n");  
+   	printf("++------------------------------------------------------++\n");  
+   	printf("|| 1) Baju  		 \t\t || Rp. 500  	||\n");  
+   	printf("|| 2) Kemeja  		 \t\t || Rp. 800  	||\n");
+   	printf("|| 3) Celana Pendek  	\t\t || Rp. 1000	||\n");  
+   	printf("|| 4) Celana Panjang 	\t\t || Rp. 1500	||\n"); 
+   	printf("|| 5) Topi		\t\t || Rp. 600	||\n");  
+   	printf("|| 6) Jaket 		\t\t || Rp. 2000	||\n");  
+   	printf("|| 7) Boneka  		\t\t || Rp. 2000	||\n");
+   	printf("|| 8) Seprai  		\t\t || Rp. 2500  	||\n");
+   	printf("|| 9) Badcover  	\t\t || Rp. 5000  	||\n");
+	printf("|| 10) Bantal  		\t\t || Rp. 3000  	||\n");
+	printf("|| 11) Selimut  	\t\t || Rp. 3500  	||\n");
+	printf("|| 12) Handuk  		\t\t || Rp. 2000  	||\n");
+	printf("|| 13) Jas  		\t\t || Rp. 2000  	||\n");
+	printf("|| 14) Sweater  	\t\t || Rp. 1500  	||\n");
+	printf("|| 15) Celana Jeans  	\t\t || Rp. 3000  	||\n"); 
+   	printf("++------------------------------------------------------++\n");  
+   	printf ("\n");
+   
+   
+   		do
+   		{  
+			printf(" Kode Pesanan : ");  
+     		scanf("%d %d", &kode, &jml);    
+     		total2 = total2+(harga[(kode-1)]) * jml;  
+     		if (kode>15)
+     		{
+     			printf ("\n           >>> KODE PAKAIAN TIDAK TERSEDIA <<< \n");
+     			goto kode;
+			 }
+   		}
+   		
+   		while(kode != 0 && jml !=0);
+   			printf ("---------------------- +\n");  
+   			printf(" TOTAL HARGA : %d\n\n", total2);  
+   
+   
+   
+// Rumus Bayar
+   
+	printf ("Masukkan Jumlah Uang Anda : ");
+	scanf ("%f", &bayar);
+
+// Rumus Kembalian
+
+	kembalian = bayar-total2;
+
+
+	printf ("Bayar : %.0f\n",bayar);
+	printf ("Kembalian : %.0f\n",kembalian);
 			
+  
+// Output program Menu 2
+
+  	system("cls");
+	printf("|================= STRUK GANDI LAUNDRY =================|\n");
+	printf("| \t\t\t\t\t\t\t|\n");
+	printf("| Nama Admin  		: %s  \t|\n", nama_admin);
+	printf("| Kode Admin   		: %s  \t\t\t\t|\n", kode_admin);
+	printf("| Tanggal Pembayaran 	: %02d-%02d-%d  \t\t\t|\n", tm.tm_mday, tm.tm_mon + 1, tm.tm_year + 1900);
+	printf("| \t\t\t\t\t\t\t|\n");
+	printf("|-------------------------------------------------------|\n");
+	printf("| \t\t\t\t\t\t\t|\n");
+	printf("| Nama Pelanggan	: %s \t\t\t|\n", datapengguna.nama);
+	printf("| Email Pelanggan	: %s \t\t|\n", datapengguna.email);
+	printf("| Alamat Pelanggan	: %s \t\t\t|\n",datapengguna.alamat);
+	printf("| \t\t\t\t\t\t\t|\n");
+	printf("|-------------------------------------------------------|\n");
+	printf("| \t\t\t\t\t\t\t|\n");
+	printf("| Pilihan Menu 		: %i \t\t\t\t|\n", pilih);
+	printf("| Total			: Rp. %i \t\t\t|\n",total2);
+	printf("| Bayar			: Rp. %.0f \t\t\t|\n",bayar);
+	printf("| Kembalian		: Rp. %.0f \t\t\t|\n",kembalian);
+	printf("|=======================================================|\n");
+
 			
 					
 	printf("\n\nTekan Y untuk kembali atau tekan T untuk keluar : ");
@@ -380,6 +476,7 @@ struct User
 		}
 
  	keluar :
+			
   	
 	printf("\n                  ** TERIMAKASIH TELAH MEMPERCAYAI GANDI LAUNDRY **      \n");
   
