@@ -437,29 +437,7 @@ struct User
 	printf ("Bayar : %.0f\n",bayar);
 	printf ("Kembalian : %.0f\n",kembalian);
 			
-  
-// Output program Menu 2
 
-  	system("cls");
-	printf("|================= STRUK GANDI LAUNDRY =================|\n");
-	printf("| \t\t\t\t\t\t\t|\n");
-	printf("| Nama Admin  		: %s  \t|\n", nama_admin);
-	printf("| Kode Admin   		: %s  \t\t\t\t|\n", kode_admin);
-	printf("| Tanggal Pembayaran 	: %02d-%02d-%d  \t\t\t|\n", tm.tm_mday, tm.tm_mon + 1, tm.tm_year + 1900);
-	printf("| \t\t\t\t\t\t\t|\n");
-	printf("|-------------------------------------------------------|\n");
-	printf("| \t\t\t\t\t\t\t|\n");
-	printf("| Nama Pelanggan	: %s \t\t\t|\n", datapengguna.nama);
-	printf("| Email Pelanggan	: %s \t\t|\n", datapengguna.email);
-	printf("| Alamat Pelanggan	: %s \t\t\t|\n",datapengguna.alamat);
-	printf("| \t\t\t\t\t\t\t|\n");
-	printf("|-------------------------------------------------------|\n");
-	printf("| \t\t\t\t\t\t\t|\n");
-	printf("| Pilihan Menu 		: %i \t\t\t\t|\n", pilih);
-	printf("| Total			: Rp. %i \t\t\t|\n",total2);
-	printf("| Bayar			: Rp. %.0f \t\t\t|\n",bayar);
-	printf("| Kembalian		: Rp. %.0f \t\t\t|\n",kembalian);
-	printf("|=======================================================|\n");
 
 			
 					
