@@ -230,15 +230,15 @@ struct User
 	printf ("\n");
 	break;
 			
-		case (2):
-			printf ("\n++----------------------------------------------++\n");
-			printf ("++   	  ANDA MEMILIH KATEGORI BIASA		++\n" );
-			printf ("++   	  Biaya Kategori Biasa = 10000/kg	++\n");
-			printf ("++----------------------------------------------++\n");
-			printf ("\n");
-			printf ("Masukkan Berat (kg) : ");
-			scanf ("%i", &berat);
-			total1 = 10000 * berat;
+	case (2):
+		printf ("\n++----------------------------------------------++\n");
+		printf ("++   	  ANDA MEMILIH KATEGORI BIASA		++\n" );
+		printf ("++   	  Biaya Kategori Biasa = 10000/kg	++\n");
+		printf ("++----------------------------------------------++\n");
+		printf ("\n");
+		printf ("Masukkan Berat (kg) : ");
+		scanf ("%i", &berat);
+		total1 = 10000 * berat;
 			
 			if (berat >=5)
 			{
