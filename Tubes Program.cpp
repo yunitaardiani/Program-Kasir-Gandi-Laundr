@@ -253,18 +253,18 @@ struct User
 				printf ("\n");
 				printf("\n                  >>>> ANDA TIDAK MENDAPATKAN DISKON <<<<      \n");
 			}
-			printf ("\n");
-			break;
+				printf ("\n");
+				break;
 			
-		case (3):
-			printf ("\n++----------------------------------------------++\n");
-			printf ("++   	  ANDA MEMILIH KATEGORI SETRIKA		++\n" );
-			printf ("++   	  Biaya Kategori Setrika = 8000/kg	++\n");
-			printf ("++----------------------------------------------++\n");
-			printf ("\n");
-			printf ("Masukkan Berat (kg) : ");
-			scanf ("%i", &berat);
-			total1 = 8000 * berat;
+	case (3):
+		printf ("\n++----------------------------------------------++\n");
+		printf ("++   	  ANDA MEMILIH KATEGORI SETRIKA		++\n" );
+		printf ("++   	  Biaya Kategori Setrika = 8000/kg	++\n");
+		printf ("++----------------------------------------------++\n");
+		printf ("\n");
+		printf ("Masukkan Berat (kg) : ");
+		scanf ("%i", &berat);
+		total1 = 8000 * berat;
 			
 			if (berat >=5)
 			{
@@ -279,18 +279,17 @@ struct User
 				printf ("\n");
 				printf("\n                  >>>> ANDA TIDAK MENDAPATKAN DISKON <<<<      \n");
 			}
-			printf ("\n");
-			break;
-			
-		case (4):
-			printf("\n\n PILIHAN TIDAK TERSEDIA \n");
-			break;
-			default:
+				printf ("\n");
 				break;
 			
+	case (4):
+		printf("\n\n PILIHAN TIDAK TERSEDIA \n");
+		break;
+		default:
+		break;
+			
 		 }
-			
-			
+				
 			
 	{
 			printf ("|--------------------------------------------------------|");
@@ -362,11 +361,11 @@ struct User
   
 		printf("\n                  ***** TERIMAKASIH TELAH MEMPERCAYAI GANDI LAUNDRY *****      \n");
 		
-		}		
+		}
 			
 	
 
-		else if (pilih==2)	
+	else if (pilih==2)	
 	{
 		
 	system("cls");
