@@ -407,7 +407,7 @@ struct User
    
    		do
    		{  
-			printf(" Kode Pesanan : ");  
+		printf(" Kode Pesanan : ");  
      		scanf("%d %d", &kode, &jml);    
      		total2 = total2+(harga[(kode-1)]) * jml;  
      		if (kode>15)
