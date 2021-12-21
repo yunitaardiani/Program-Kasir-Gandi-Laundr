@@ -229,8 +229,34 @@ struct User
 	}
 	printf ("\n");
 	break;
-			
+	
 	case (2):
+		printf ("\n++----------------------------------------------++\n");
+		printf ("++   	  ANDA MEMILIH KATEGORI EXPRESS		++\n" );
+		printf ("++   	  Biaya Kategori Setrika = 13000/kg	++\n");
+		printf ("++----------------------------------------------++\n");
+		printf ("\n");
+		printf ("Masukkan Berat (kg) : ");
+		scanf ("%i", &berat);
+		total1 = 13000 * berat;
+			
+			if (berat >=5)
+			{
+				diskon = 8000;
+				total_bayar = 13000*berat-8000;
+				printf ("\n");
+				printf("\n                  >>>> SELAMAT ANDA MENDAPAT DISKON --> 8000 <<<<      \n");
+			}
+			else if (berat <5)
+			{
+				total_bayar = 13000*berat;
+				printf ("\n");
+				printf("\n                  >>>> ANDA TIDAK MENDAPATKAN DISKON <<<<      \n");
+			}
+			printf ("\n");
+			break;
+			
+	case (3):
 		printf ("\n++----------------------------------------------++\n");
 		printf ("++   	  ANDA MEMILIH KATEGORI BIASA		++\n" );
 		printf ("++   	  Biaya Kategori Biasa = 10000/kg	++\n");
@@ -256,7 +282,7 @@ struct User
 				printf ("\n");
 				break;
 			
-	case (3):
+	case (4):
 		printf ("\n++----------------------------------------------++\n");
 		printf ("++   	  ANDA MEMILIH KATEGORI SETRIKA		++\n" );
 		printf ("++   	  Biaya Kategori Setrika = 8000/kg	++\n");
@@ -281,12 +307,6 @@ struct User
 			}
 				printf ("\n");
 				break;
-			
-	case (4):
-		printf("\n\n PILIHAN TIDAK TERSEDIA \n");
-		break;
-		default:
-		break;
 			
 		 }
 				
