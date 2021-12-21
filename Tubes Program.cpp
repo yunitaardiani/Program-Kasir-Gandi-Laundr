@@ -207,29 +207,30 @@ struct User
 	switch (kategori)
 	{
 	case (1):
-	printf ("\n++----------------------------------------------++\n");
-	printf ("++   	  ANDA MEMILIH KATEGORI KILAT		++\n" );
-	printf ("++   	  Biaya Kategori Kilat = 15000 		++\n");
-	printf ("++----------------------------------------------++\n");
-	printf ("\n");
-	printf ("Masukkan Berat (kg) : ");
-	scanf ("%i", &berat);
-	total1 = 15000 * berat;
-	if (berat >=5)
-	{
-	diskon = 10000;
-	total_bayar = 15000*berat-10000;
-	printf ("\n");
-	printf("\n                  >>>> SELAMAT ANDA MENDAPAT DISKON --> 10000 <<<<      \n");
-	}
-	else if (berat <5)
-	{
-	total_bayar = 15000*berat;
-	printf ("\n");
-	printf("\n                  >>>> ANDA TIDAK MENDAPATKAN DISKON <<<<      \n");
-	}
-	printf ("\n");
-	break;
+		printf ("\n++----------------------------------------------++\n");
+		printf ("++   	  ANDA MEMILIH KATEGORI KILAT		++\n" );
+		printf ("++   	  Biaya Kategori Kilat = 15000 		++\n");
+		printf ("++----------------------------------------------++\n");
+		printf ("\n");
+		printf ("Masukkan Berat (kg) : ");
+		scanf ("%i", &berat);
+		total1 = 15000 * berat;
+			
+			if (berat >=5)
+			{
+				diskon = 10000;
+				total_bayar = 15000*berat-10000;
+				printf ("\n");
+				printf("\n                  >>>> SELAMAT ANDA MENDAPAT DISKON --> 10000 <<<<      \n");
+			}
+			else if (berat <5)
+			{
+				total_bayar = 15000*berat;
+				printf ("\n");
+				printf("\n                  >>>> ANDA TIDAK MENDAPATKAN DISKON <<<<      \n");
+			}
+				printf ("\n");
+				break;
 	
 	case (2):
 		printf ("\n++----------------------------------------------++\n");
