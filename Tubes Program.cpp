@@ -195,8 +195,9 @@ struct User
         printf("\n|===============================================|\n");
 	printf("|Kategori Cucian :				|\n");
 	printf("|\t1.Kilat					|\n");
-	printf("|\t2.Biasa					|\n");
-	printf("|\t3.Setrika				|\n");
+	printf("|\t2.Express					|\n");
+	printf("|\t3.Biasa					|\n");
+	printf("|\t4.Setrika					|\n");
     	printf("|===============================================|\n");
 	printf("\nMasukkan kategori cucian : ");
 	scanf("%i", & kategori);
@@ -233,7 +234,7 @@ struct User
 	case (2):
 		printf ("\n++----------------------------------------------++\n");
 		printf ("++   	  ANDA MEMILIH KATEGORI EXPRESS		++\n" );
-		printf ("++   	  Biaya Kategori Setrika = 13000/kg	++\n");
+		printf ("++   	  Biaya Kategori Express = 13000/kg	++\n");
 		printf ("++----------------------------------------------++\n");
 		printf ("\n");
 		printf ("Masukkan Berat (kg) : ");
