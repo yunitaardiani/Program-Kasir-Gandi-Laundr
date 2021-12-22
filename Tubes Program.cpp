@@ -1,7 +1,18 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
+/***************************************************************************************************
+TUGAS BESAR PEMROGRAMAN KELOMPOK 17
+ANGGOTA :
+1. Ni Luh Yunita Ardiani (2105551025)
+2. Ni Kadek Intan Diana Putri (2105551026)
+JUDUL PROGRAM	: PROGRAM KASIR GANDI LAUNDRY
+****************************************************************************************************/
+
+
+
+#include <stdio.h>		//Header yang di gunakan untuk standar input output pada bahasa C
+#include <stdlib.h>		//Header yang di gunakan untuk standar input output pada bahasa C
+#include <string.h>		//Header yang di gunakan untuk operasi string pada bahasa C
+#include <time.h>		//Header yang di gunakan untuk operasi pada bahasa C
+
 
 int main ()
 {
