@@ -17,35 +17,51 @@ JUDUL PROGRAM	: PROGRAM KASIR GANDI LAUNDRY
 int main ()
 {
 
-//struct user berisi data pengguna
-struct User
+//STRUCT USER DATA PENGGUNA
+
+	struct User
 	{
-    char nama[30];
-    char email[30];
-    char username[30];
-    char password[30];
-    char alamat[30];	 
+    	char nama[30];
+    	char email[30];
+    	char username[30];
+    	char password[30];
+    	char alamat[30];	 
 	};
 
-	// Data Admin 
-	char nama_admin[50],password_admin[50],kode_admin [10], admin;
+// DATA ADMIN
 
-	//DATA PELANGGAN
-	int tanggal, berat, total1;
-	float total_bayar, diskon, bayar, kembalian;
+	char nama_admin[50];
+	char password_admin[50];
+	char kode_admin [10];
+	char admin;
+
+//DATA PELANGGAN
+	
+	int tanggal;
+	int berat;
+	int total1;
+	float total_bayar;
+	float diskon;
+	float bayar;
+	float kembalian;
 	char kategori;
 	
-	// Harga Pakaian Laundry
-	int jml, total2 = 0;
-	int kode, harga [15] = {500,800,1000,1500,600,2000,2000,2500,5000,3000,3500,2000,2000,1500,3000};
+// HARGA PAKAIAN LAUNDRY
 
-	//PENGULANGAN DAN PILIHAN LOGIN ADMIN
-	char keluar, pilih;
+	int jml;
+	int total2 = 0;
+	int kode;
+	int harga [15] = {500,800,1000,1500,600,2000,2000,2500,5000,3000,3500,2000,2000,1500,3000};
+
+//PENGULANGAN DAN PILIHAN LOGIN ADMIN
+
+	char keluar;
+	char pilih;
 	
-	//TANGGAL
+//TANGGAL
+
 	time_t t = time(NULL);
 	struct tm tm = *localtime(&t);
-
 
   
 	printf("| ===================== SELAMAT DATANG =================== |\n");
