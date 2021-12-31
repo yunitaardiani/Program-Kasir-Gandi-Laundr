@@ -370,33 +370,59 @@ int main ()
 
 
 
-// Output program Menu 1
+// Struk Laundry Menu 1
+	FILE*struk;
+	struk=fopen("C:/Users/acer/Documents/INTAN/PEMROGRAMAN/file kasir/riwayattransaksi1","a");	
 
 	system("cls");
 	printf("|================= STRUK GANDI LAUNDRY ==================|\n");
+	fprintf(struk,"|================= STRUK GANDI LAUNDRY ==================\n");
 	printf("| \t\t\t\t\t\t\t |\n");
-	printf("| Nama Admin  		: %s \t |\n", nama_admin);
-	printf("| Kode Admin   		: %s \t\t\t\t |\n", kode_admin);
-	printf("| Tanggal Pembayaran 	: %02d-%02d-%d \t\t\t |\n", tm.tm_mday, tm.tm_mon + 1, tm.tm_year + 1900);
+	fprintf(struk,"| \t\t\t\t\t\t\t \n");
+	fprintf(struk,"| Nama Admin  		: %s  \t\n", nama_admin);
+	printf("| Nama Admin  		: %s  \t |\n", nama_admin);
+	fprintf(struk,"| Kode Admin   		: %s  \t\t\t\t\n", kode_admin);
+	printf("| Kode Admin   		: %s  \t\t\t\t |\n", kode_admin);
+	fprintf(struk,"| Tanggal Pembayaran 	: %02d-%02d-%d  \t\t\t\n", tm.tm_mday, tm.tm_mon + 1, tm.tm_year + 1900);
+	printf("| Tanggal Pembayaran 	: %02d-%02d-%d  \t\t\t |\n", tm.tm_mday, tm.tm_mon + 1, tm.tm_year + 1900);
+	fprintf(struk,"| \t\t\t\t\t\t\t\n");
 	printf("| \t\t\t\t\t\t\t |\n");
+	fprintf(struk,"|-------------------------------------------------------\n");
 	printf("|--------------------------------------------------------|\n");
+	fprintf(struk,"| \t\t\t\t\t\t\t\n");
 	printf("| \t\t\t\t\t\t\t |\n");
+	fprintf(struk,"| Nama Pelanggan	: %s \t\t\t\n", datapengguna.nama);
 	printf("| Nama Pelanggan	: %s \t\t\t |\n", datapengguna.nama);
+	fprintf(struk,"| Email Pelanggan	: %s \t\t\n", datapengguna.email);
 	printf("| Email Pelanggan	: %s \t\t |\n", datapengguna.email);
+	fprintf(struk,"| Alamat Pelanggan	: %s \t\t\t\n",datapengguna.alamat);
 	printf("| Alamat Pelanggan	: %s \t\t\t |\n",datapengguna.alamat);
+	fprintf(struk,"| \t\t\t\t\t\t\t\n");
 	printf("| \t\t\t\t\t\t\t |\n");
-	printf("|--------------------------------------------------------|\n");
+	fprintf(struk,"|-------------------------------------------------------\n");
+	printf("|------------------------------------------------------- |\n");
+	fprintf(struk,"| \t\t\t\t\t\t\t\n");
 	printf("| \t\t\t\t\t\t\t |\n");
 	printf("| Pilihan Menu 		: %i \t\t\t\t |\n", pilih);
+	fprintf(struk,"| Pilihan Menu 		: %i \t\t\t\t \n", pilih);
 	printf("| Kategori Cucian 	: %i \t\t\t\t |\n",kategori);
+	fprintf(struk,"| Kategori Cucian 	: %i \t\t\t\t \n",kategori);
 	printf("| Berat (kg)		: %i \t\t\t\t |\n",berat);
+	fprintf(struk,"| Berat (kg)		: %i \t\t\t\t \n",berat);
 	printf("| Total			: Rp. %i \t\t\t |\n",total1);
+	fprintf(struk,"| Total			    : Rp. %i \t\t\t \n",total1);
 	printf("| Total Diskon 		: Rp. %.0f \t\t\t |\n", diskon);
+	fprintf(struk,"| Total Diskon 		: Rp. %.0f \t\t\t \n", diskon);
 	printf("| Total Bayar 		: Rp. %.0f \t\t\t |\n",total_bayar);
+	fprintf(struk,"| Total Bayar 		: Rp. %.0f \t\t\t \n",total_bayar);
 	printf("| Bayar			: Rp. %.0f \t\t\t |\n",bayar);
+	fprintf(struk,"| Bayar	     		: Rp. %.0f \t\t\t \n",bayar);
 	printf("| Kembalian		: Rp. %.0f \t\t\t |\n",kembalian);
+	fprintf(struk,"| Kembalian	    	: Rp. %.0f \t\t\t \n",kembalian);
 	printf("|========================================================|\n");
+	fprintf(struk,"|========================================================\n");
 	
+fclose(struk);
 	
 	
 	printf("\n\nTekan Y untuk kembali atau tekan T untuk keluar : ");
