@@ -173,36 +173,40 @@ int main ()
     fclose(registrasi);
     getchar();
     system ("cls");
-  
-	}
-    case 2:
-    	system("cls");
-    	printf("\n=============================|");
-    	printf("\n        Gandi Laundry         |");
-    	printf("\n                             |");
-    	printf("\n=============================|");
-    	printf("\n       Silahkan Login        |");
-    	printf("\n                             |");
-    	printf("\n=============================|");
-        printf("\nmasukan username: ");
-        scanf("\n%[^\n]", &username);
-        printf("\nmasukan password: ",&password);
-        scanf("\n%[^\n]", &password);
+  }
+   
+	
+	system("cls");
+    	printf("|=============================|\n");
+    	printf("|        Gandi Laundry        |\n");
+    	printf("|                             |\n");
+    	printf("|-----------------------------|\n");
+    	printf("|       Silahkan Login        |\n");
+    	printf("|                             |\n");
+    	printf("|=============================|\n");
+    	
+        printf("\n\n Masukan Username 	: ");
+        scanf("%s", &username);
+        
+        printf("\n Masukan Password 	: ");
+        scanf("\n%s", &password);
 
         if (strcmp(datapengguna.username,username) == 0 && strcmp(datapengguna.password,password) == 0)
         {
-          printf("\nanda berhasil Login");
+          printf("\n Anda berhasil Login");
           system ("cls");
           printf("\n==========================|");
         
         }else
         {
-            printf("\nAnda tidak berhasil Login\n");
-            printf("\nSilahkan ENTER untuk kembali ke MENU!");
+            printf("\n Anda tidak berhasil Login\n");
+            printf("\n Silahkan ENTER untuk kembali ke MENU!");
             pilihan = 0;
         	goto menu;
             
         }
+
+        
 
 
 
