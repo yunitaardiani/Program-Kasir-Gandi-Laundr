@@ -63,7 +63,19 @@ int main ()
 	time_t t = time(NULL);
 	struct tm tm = *localtime(&t);
 
-  
+  	// tampilan header
+	system("cls");
+	printf("+----------------------------------------------------------+\n");
+	printf("|                Program Kasir GandiLaundry                |\n");
+	printf("+----------------------------------------------------------+\n");
+	printf("|                                                          |\n");
+	printf("|                      Dibuat Oleh :                       |\n");
+	printf("|                                                          |\n");
+	printf("|                  Ni Luh Yunita Ardiani                   |\n");
+	printf("|                NiKadek Intan Diana Putri                 |\n");
+	printf("|                                                          |\n");
+	printf("+----------------------------------------------------------+\n");
+	printf("\n\n");
 	printf("| ===================== SELAMAT DATANG =================== |\n");
 	printf("|               PROGRAM KASIR GANDI LAUNDRY                |\n");
 	printf("| ======================================================== |\n");
@@ -457,31 +469,7 @@ fclose(struk);
    	printf("|-------------------------------------------------|\n\n");
    	
    	kode:
-	printf("\n");   
-	printf("***********************************************************\n");  
-   	printf("\n            >>> DAFTAR PAKAIAN LAUNDRY <<<                 \n");  
-   	printf("\n***********************************************************\n\n");
-   	printf("++------------------------------------------------------++\n");  
-   	printf("|| Kode Pakaian   	 \t\t || Harga      	||\n");  
-   	printf("++------------------------------------------------------++\n");  
-   	printf("|| 1) Baju  		 \t\t || Rp. 500  	||\n");  
-   	printf("|| 2) Kemeja  		 \t\t || Rp. 800  	||\n");
-   	printf("|| 3) Celana Pendek  	\t\t || Rp. 1000	||\n");  
-   	printf("|| 4) Celana Panjang 	\t\t || Rp. 1500	||\n"); 
-   	printf("|| 5) Topi		\t\t || Rp. 600	||\n");  
-   	printf("|| 6) Jaket 		\t\t || Rp. 2000	||\n");  
-   	printf("|| 7) Boneka  		\t\t || Rp. 2000	||\n");
-   	printf("|| 8) Seprai  		\t\t || Rp. 2500  	||\n");
-   	printf("|| 9) Badcover  	\t\t || Rp. 5000  	||\n");
-	printf("|| 10) Bantal  		\t\t || Rp. 3000  	||\n");
-	printf("|| 11) Selimut  	\t\t || Rp. 3500  	||\n");
-	printf("|| 12) Handuk  		\t\t || Rp. 2000  	||\n");
-	printf("|| 13) Jas  		\t\t || Rp. 2000  	||\n");
-	printf("|| 14) Sweater  	\t\t || Rp. 1500  	||\n");
-	printf("|| 15) Celana Jeans  	\t\t || Rp. 3000  	||\n"); 
-   	printf("++------------------------------------------------------++\n");  
-   	printf ("\n");
-   
+	
    
    		do
    		{  
