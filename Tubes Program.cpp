@@ -363,9 +363,6 @@ int main ()
 
 			kembalian = bayar-total_bayar;
 
-
-			printf ("Bayar : %.0f\n",bayar);
-			printf ("Kembalian : %.0f\n",kembalian);
 	}
 
 
