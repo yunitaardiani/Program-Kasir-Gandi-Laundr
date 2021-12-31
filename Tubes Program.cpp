@@ -469,7 +469,24 @@ fclose(struk);
    	printf("|-------------------------------------------------|\n\n");
    	
    	kode:
+	printf("\n");  
+	// data pakaian laundry disimpan pada file datapakaianlaundry.txt 
+	{
+	FILE*data;
+	char a[100];
+	data=fopen("C:/Users/ASUS/Documents/PEMROGRAMAN/file kasir/datapakaianlaundry.txt","r");
+	while(!feof(data))
+	{
+		fgets(a,100,data);
+		printf("%s",a);
+	}
 	
+	fclose(data);
+}
+	printf("\n");
+	printf("\n");  
+   	printf("\n            >>> MASUKKAN KODE PESANAN <<<               \n");  
+   	printf("++------------------------------------------------------++\n");  
    
    		do
    		{  
