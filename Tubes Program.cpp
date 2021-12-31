@@ -6,8 +6,6 @@ ANGGOTA :
 JUDUL PROGRAM	: PROGRAM KASIR GANDI LAUNDRY
 ****************************************************************************************************/
 
-
-
 #include <stdio.h>		//Header yang di gunakan untuk standar input output pada bahasa C
 #include <stdlib.h>		//Header yang di gunakan untuk standar input output pada bahasa C
 #include <string.h>		//Header yang di gunakan untuk operasi string pada bahasa C
@@ -514,7 +512,7 @@ fclose(struk);
 	kembalian = bayar-total2;
 
 
-	// Output program Menu 2
+// Struk Laundry Menu 2
 
   	FILE*struk;
 	struk=fopen("C:/Users/ASUS/Documents/PEMROGRAMAN/file kasir/riwayattransaksi2","a");
