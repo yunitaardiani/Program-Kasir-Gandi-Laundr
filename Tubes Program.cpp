@@ -218,9 +218,7 @@ int main ()
             
         }
 
-        
-
-
+       
 
 	// Menu Laundry
 	system("cls");
