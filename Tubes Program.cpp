@@ -119,60 +119,62 @@ int main ()
     char password[30];
     char alamat[30];
 
-    menu:
-    system("cls");
-    printf("\n==================================|");
-    printf("\n  Selamat Datang Di Gandi Laundry |");
-    printf("\n==================================|");
-    printf("\n    Silahkan Pilih Menu           |");
-    printf("\n==================================|");
-    printf("\n1. Registrasi                     |");
-    printf("\n2. Login                          |");
-	printf("\n==================================|");
-    
-    printf("\nmasukan pilihan Anda: ");
-    scanf("%d",&pilihan);
-    
-    switch (pilihan)
+	
+   // REGISTRASI 
+
+    void daftar();
+	{
+    // Membuat pointer registrasi untuk file "dataregis.txt"
+    FILE *registrasi;
+    // Membuka file "dataregis.txt" dengan mode append
+    registrasi = fopen("C:/Users/acer/Documents/INTAN/PEMROGRAMAN/file kasir/dataregis","a");
+    if (registrasi == NULL)
     {
-    case 1:
-       system ("cls");
-        printf("\n==============================|");
-	printf("\n         Registrasi           |");
-	printf("\n==============================|");
-        printf("\nSilahkan Masukan Data  :  |");
-        printf("\n==============================|");
-        printf("\nmasukan nama: ");
-        scanf("\n%[^\n]", &datapengguna.nama);
-		    
-		    
-		    
-	printf("\nmasukan email: ");
-        scanf("\n%[^\n]", &datapengguna.email);
+    	fputs("Tidak terdapat FILE!!", stderr);
+        exit(1);
+    }
+
+// input  data untuk registrasi
+	menu:
+    system("cls");
+    printf("|==============================================|\n");
+    printf("|      Selamat Datang Di Gandi Laundry         |\n");
+    printf("|----------------------------------------------|\n");
+    printf("================================================\n");
+    printf("     Silahkan registrasi terlebih dahulu! 		\n");
+    printf("------------------------------------------------\n");
+    getchar();
+    printf("\n Masukan Nama 		: ");
+    scanf("\n%[^\n]s", & datapengguna.nama);
+    printf("\n Masukan Email 		: ");
+    scanf("\n%[^\n]s", & datapengguna.email);
+    printf("\n Masukan Alamat 	: ");
+    scanf("\n%[^\n]s", & datapengguna.alamat);
+    
+	    
+    system("cls");
+    printf("|==========================================|\n");
+    printf("      Selamat Datang %s!\n",datapengguna.nama  );
+    printf("|------------------------------------------|\n");
+    printf("|Silahkan input username (max 10)          |\n");
+    printf("|Silahkan input password (max 8)           |\n");
+    printf("|==========================================|\n"); 
+	
+	// input username dan password yang akan digunakan
+    printf("\n Masukan Username 	: ");
+    scanf("\n%[^\n]s", & datapengguna.username);
+    printf("\n Masukan Password 	: ");
+    scanf("\n%[^\n]s", & datapengguna.password);
         
-        printf("\nmasukan username: ");
-        scanf("\n%[^\n]", &datapengguna.username);
         
-
-        printf("\nmasukan password: ");
-        scanf("\n%[^\n]", &datapengguna.password);
-        
-         printf("\nmasukan alamat: ");
-        scanf("\n%[^\n]", &datapengguna.alamat);
-       
-       
-		
-
-        printf("\nakun anda berhasil di daftarkan\n");
-        printf("\nKlik Enter Untuk Kembali Ke Menu");
-       	
-       	
-       
-        pilihan = 0;
-        goto menu;
-
-
-        break;
+    fwrite(&datapengguna,sizeof(datapengguna),1,registrasi);
+    //print new line agar data lain tidak berada di satu baris yang sama
+    fprintf(registrasi, "\n");               
+    fclose(registrasi);
+    getchar();
+    system ("cls");
+  
+	}
     case 2:
     	system("cls");
     	printf("\n=============================|");
