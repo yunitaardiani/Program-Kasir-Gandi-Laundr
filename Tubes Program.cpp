@@ -145,7 +145,7 @@ int main ()
     }
 
 // input  data untuk registrasi
-	menu:
+    menu:
     system("cls");
     printf("|==============================================|\n");
     printf("|      Selamat Datang Di Gandi Laundry         |\n");
@@ -187,6 +187,7 @@ int main ()
    
 	
 	system("cls");
+	Login:
     	printf("|=============================|\n");
     	printf("|        Gandi Laundry        |\n");
     	printf("|                             |\n");
@@ -212,7 +213,7 @@ int main ()
             printf("\n Anda tidak berhasil Login\n");
             printf("\n Silahkan ENTER untuk kembali ke MENU!");
             pilihan = 0;
-        	goto menu;
+        	goto Login;
             
         }
 
@@ -470,7 +471,7 @@ fclose(struk);
 	{
 	FILE*data;
 	char a[100];
-	data=fopen("C:/Users/ASUS/Documents/PEMROGRAMAN/file kasir/datapakaianlaundry.txt","r");
+	data=fopen("datapakaianlaundry.txt","r");
 	while(!feof(data))
 	{
 		fgets(a,100,data);
@@ -515,47 +516,52 @@ fclose(struk);
 // Struk Laundry Menu 2
 
   	FILE*struk;
-	struk=fopen("C:/Users/ASUS/Documents/PEMROGRAMAN/file kasir/riwayattransaksi2","a");
+	struk=fopen("riwayattransaksi","a");
 	
   	system("cls");
-	fprintf(struk,"|================= STRUK GANDI LAUNDRY =================\n");
+	
 	printf("|================= STRUK GANDI LAUNDRY =================|\n");
-	fprintf(struk,"| \t\t\t\t\t\t\t\n");
 	printf("| \t\t\t\t\t\t\t|\n");
-	fprintf(struk,"| Nama Admin  		: %s  \t\n", nama_admin);
 	printf("| Nama Admin  		: %s  \t|\n", nama_admin);
-	fprintf(struk,"| Kode Admin   		: %s  \t\t\t\t\n", kode_admin);
 	printf("| Kode Admin   		: %s  \t\t\t\t|\n", kode_admin);
-	fprintf(struk,"| Tanggal Pembayaran 	: %02d-%02d-%d  \t\t\t\n", tm.tm_mday, tm.tm_mon + 1, tm.tm_year + 1900);
-	printf("| Tanggal Pembayaran 	: %02d-%02d-%d  \t\t\t|\n", tm.tm_mday, tm.tm_mon + 1, tm.tm_year + 1900);
-	fprintf(struk,"| \t\t\t\t\t\t\t\n");
+	printf("| Tanggal Pembayaran	: %02d-%02d-%d  \t\t\t|\n", tm.tm_mday, tm.tm_mon + 1, tm.tm_year + 1900);
 	printf("| \t\t\t\t\t\t\t|\n");
-	fprintf(struk,"|-------------------------------------------------------\n");
 	printf("|-------------------------------------------------------|\n");
-	fprintf(struk,"| \t\t\t\t\t\t\t\n");
 	printf("| \t\t\t\t\t\t\t|\n");
-	fprintf(struk,"| Nama Pelanggan	: %s \t\t\t\n", datapengguna.nama);
 	printf("| Nama Pelanggan	: %s \t\t\t|\n", datapengguna.nama);
-	fprintf(struk,"| Email Pelanggan	: %s \t\t\n", datapengguna.email);
 	printf("| Email Pelanggan	: %s \t\t|\n", datapengguna.email);
-	fprintf(struk,"| Alamat Pelanggan	: %s \t\t\t\n",datapengguna.alamat);
 	printf("| Alamat Pelanggan	: %s \t\t\t|\n",datapengguna.alamat);
-	fprintf(struk,"| \t\t\t\t\t\t\t\n");
 	printf("| \t\t\t\t\t\t\t|\n");
-	fprintf(struk,"|-------------------------------------------------------\n");
 	printf("|-------------------------------------------------------|\n");
-	fprintf(struk,"| \t\t\t\t\t\t\t\n");
 	printf("| \t\t\t\t\t\t\t|\n");
-	fprintf(struk,"| Pilihan Menu 		: %i \t\t\t\t\n", pilih);
 	printf("| Pilihan Menu 		: %i \t\t\t\t|\n", pilih);
-	fprintf(struk,"| Total			: Rp. %i \t\t\t\n",total2);
 	printf("| Total			: Rp. %i \t\t\t|\n",total2);
-	fprintf(struk,"| Bayar			: Rp. %.0f \t\t\t\n",bayar);
 	printf("| Bayar			: Rp. %.0f \t\t\t|\n",bayar);
-	fprintf(struk,"| Kembalian		: Rp. %.0f \t\t\t\n",kembalian);
 	printf("| Kembalian		: Rp. %.0f \t\t\t|\n",kembalian);
-	fprintf(struk,"|=======================================================\n");
 	printf("|=======================================================|\n");
+	
+	
+	// menuliskan data yang di input ke file riwayattransaksi
+	
+	fprintf(struk,"|================= STRUK GANDI LAUNDRY =================\n");
+	fprintf(struk,"| \t\t\t\t\t\t\t\n");
+	fprintf(struk,"| Nama Admin  		: %s  \t\n", nama_admin);
+	fprintf(struk,"| Kode Admin   		: %s  \t\t\t\t\n", kode_admin);
+	fprintf(struk,"| Tanggal Pembayaran: %02d-%02d-%d  \t\t\t\n", tm.tm_mday, tm.tm_mon + 1, tm.tm_year + 1900);
+	fprintf(struk,"| \t\t\t\t\t\t\t\n");
+	fprintf(struk,"|-------------------------------------------------------\n");
+	fprintf(struk,"| \t\t\t\t\t\t\t\n");
+	fprintf(struk,"| Nama Pelanggan	: %s \t\t\t\n", datapengguna.nama);
+	fprintf(struk,"| Email Pelanggan	: %s \t\t\n", datapengguna.email);
+	fprintf(struk,"| Alamat Pelanggan	: %s \t\t\t\n",datapengguna.alamat);
+	fprintf(struk,"| \t\t\t\t\t\t\t\n");
+	fprintf(struk,"|-------------------------------------------------------\n");
+	fprintf(struk,"| \t\t\t\t\t\t\t\n");
+	fprintf(struk,"| Pilihan Menu 		: %i \t\t\t\t\n", pilih);
+	fprintf(struk,"| Total				: Rp. %i \t\t\t\n",total2);
+	fprintf(struk,"| Bayar				: Rp. %.0f \t\t\t\n",bayar);
+	fprintf(struk,"| Kembalian			: Rp. %.0f \t\t\t\n",kembalian);
+	fprintf(struk,"|=======================================================\n");
 	
 	fclose(struk);
 	
